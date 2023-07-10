@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  font: 16px/1.5 "Helevtica Neue", Helevtica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+  color: #333;
+}
+body header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+body header img {
+  align-self: baseline;
+  width: 5vw;
+  height: 5vw;
+}
+body header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body header nav ul li {
+  margin: 1rem;
+}
+body header nav ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 2rem;
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main .desc {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 80vw;
+  min-height: 70vh;
+}
+body main .desc .desc-text {
+  flex: 1 1 400px;
+  border: 1px solid #000;
+  font-size: 1.5rem;
+}
+body main .desc .desc-text p {
+  font-size: 1rem;
+}
+body main .desc img {
+  flex: 1 1 400px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  background-color: rgb(228, 255, 226);
+  min-height: 20vh;
+}
+
+.my-info {
+  width: 90vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.my-info img {
+  flex: 0 1 150px;
+  margin-right: 6rem;
+  height: 20vh;
+  width: 10vw;
+  border: 2px solid #000;
+}
+.my-info .text {
+  border: 1px solid #000;
+  flex: 0 1 800px;
+}
+.my-info .text h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.my-skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+.my-skills .each-skill {
+  margin: 2rem;
+  border: 1px solid #000;
+}
+.my-skills .each-skill h3 {
+  font-size: 1.25rem;
+}
+.my-skills .each-skill ul li {
+  list-style-type: circle;
+}
+
+.edu,
+.exp {
+  width: 90vw;
+  margin-bottom: 2rem;
+}
+.edu h3:before,
+.exp h3:before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  z-index: 10;
+  width: 7px;
+  height: 7px;
+  display: block;
+  border: 1px solid #000;
+  background-color: gray;
+  border-radius: 50%;
+}
+.edu h3,
+.exp h3 {
+  position: relative;
+  border-left: 1px solid #000;
+  padding-left: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.edu p,
+.exp p {
+  position: relative;
+  border-left: 1px inset #000;
+  padding-left: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+.edu p::after,
+.exp p::after {
+  content: "";
+  position: absolute;
+  left: -4px;
+  z-index: 10;
+  width: 7px;
+  height: 7px;
+  display: block;
+  border: 1px solid #000;
+  background-color: gray;
+  border-radius: 50%;
+}/*# sourceMappingURL=style.css.map */

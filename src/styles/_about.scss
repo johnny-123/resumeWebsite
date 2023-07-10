@@ -1,0 +1,84 @@
+.my-info {
+  width: 90vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  img {
+    flex: 0 1 150px;
+    margin-right: 6rem;
+    height: 20vh;
+    width: 10vw;
+    border: 2px solid #000;
+  }
+  .text {
+    border: 1px solid #000;
+    flex: 0 1 800px;
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+  }
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.my-skills {
+  display: flex;
+  flex-wrap: wrap;
+  .each-skill {
+    h3 {
+      font-size: 1.25rem;
+    }
+    margin: 2rem;
+    border: 1px solid #000;
+    ul {
+      li {
+        list-style-type: circle;
+      }
+    }
+  }
+}
+.edu,
+.exp {
+  width: 90vw;
+  margin-bottom: 2rem;
+  h3:before {
+    content: "";
+    position: absolute;
+    left: -4px;
+    z-index: 10;
+    width: 7px;
+    height: 7px;
+    display: block;
+    border: 1px solid #000;
+    background-color: gray;
+    border-radius: 50%;
+  }
+  h3 {
+    position: relative;
+    border-left: 1px solid #000;
+    padding-left: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  p {
+    position: relative;
+    border-left: 1px inset #000;
+    padding-left: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+  p::after {
+    content: "";
+    position: absolute;
+    left: -4px;
+    z-index: 10;
+    width: 7px;
+    height: 7px;
+    display: block;
+    border: 1px solid #000;
+    background-color: gray;
+    border-radius: 50%;
+  }
+}

@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  font: 16px/1.5 "Helevtica Neue", Helevtica, Arial, "Microsoft Yahei",
+    "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+  color: #333;
+  header {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    img {
+      align-self: baseline;
+      width: 5vw;
+      height: 5vw;
+    }
+    nav {
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        li {
+          // flex: 1 1 100px;
+          margin: 1rem;
+          a {
+            color: #333;
+            text-decoration: none;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .desc {
+      display: flex;
+      flex-wrap: wrap;
+      min-width: 80vw;
+      min-height: 70vh;
+      .desc-text {
+        flex: 1 1 400px;
+        border: 1px solid #000;
+        font-size: 1.5rem;
+        p {
+          font-size: 1rem;
+        }
+      }
+      img {
+        flex: 1 1 400px;
+      }
+    }
+  }
+}
+
+@import "./footer";
+@import "./about";
