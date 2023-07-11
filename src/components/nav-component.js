@@ -12,7 +12,10 @@ const Nav = () => {
   return (
     <div>
       <header>
-        <img src={logo} alt="網站logo" />
+        <section className="logo">
+          <img src={logo} alt="網站logo" />
+          <h1>Johnny Wang</h1>
+        </section>
         <nav>
           <ul>
             <li>
@@ -23,26 +26,26 @@ const Nav = () => {
                 <FontAwesomeIcon icon={faUser} /> 關於Johnny
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/udemy">
                 <FontAwesomeIcon icon={faBookOpen} /> 2023家教課程
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/udemy">
                 <FontAwesomeIcon icon={faLaptopCode} /> udemy課程
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/pj1">
                 <FontAwesomeIcon icon={faFileLines} /> 深碗專題專案
               </Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Link to="/about">
                 <FontAwesomeIcon icon={faBagShopping} /> 電商平台專案
               </Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
       </header>
