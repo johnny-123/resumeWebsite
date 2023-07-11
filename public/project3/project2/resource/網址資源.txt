@@ -1,0 +1,5 @@
+1.壓縮圖片
+https://tinypng.com/
+2.netlify 雲端部屬靜態網站
+https://www.netlify.com/
+密:asdfgqazwsxjo06030119

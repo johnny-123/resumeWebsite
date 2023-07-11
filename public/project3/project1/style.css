@@ -1,0 +1,204 @@
+/* 增加自己下載的字體並取名 */
+@font-face {
+  font-family: "myFont";
+  src: url("./resource/清松手寫體1.ttf");
+}
+
+/* 在此處加入上面自己新增的字體 */
+/* 無論對方電腦是否有該字體，因為伺服器有自動儲存一份此種字體，
+在伺服器中會自動設定好為該字體 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* 標楷體 */
+  font-family: "myFont", DFkai-sb, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+header div.top {
+  padding: 1rem;
+  background-image: url("./images/background.png");
+}
+
+header div.top h1 {
+  font-size: 2.5rem;
+}
+
+header div.top h3 {
+  font-size: 1rem;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  background-color: black;
+}
+
+header nav ul li {
+  padding: 0.8rem 1.2rem;
+}
+
+header nav ul li a {
+  transition: all 0.3s;
+  font-size: 1.25rem;
+  color: white;
+  text-decoration: none;
+}
+
+.active {
+  color: yellow;
+}
+
+header nav ul li a:hover {
+  color: yellow;
+}
+
+/* f12中左上有切板模式 */
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main.no-flex {
+  display: block;
+}
+
+main section {
+  padding: 1rem;
+}
+
+main section.left {
+  flex: 1 1 200px;
+}
+main section.left h3 {
+  margin-bottom: 1rem;
+}
+main section.left table {
+  margin-top: 1rem;
+}
+
+section.left table,
+tr,
+td,
+th {
+  padding: 0.25rem;
+}
+
+main .left figure img {
+  width: 90%;
+}
+
+main section.right {
+  flex: 4 1 500px;
+}
+
+section.right h3 {
+  font-size: 1.5rem;
+  padding-top: 0.5rem;
+}
+
+p {
+  padding: 0.5rem 0rem;
+}
+
+section.right ul {
+  margin-left: 2rem;
+}
+
+section .player {
+  padding: 0.5rem;
+  border: 3px solid burlywood;
+  margin: 2rem;
+}
+
+.player h4 {
+  font-size: 1.5rem;
+  color: rgb(0, 90, 91);
+}
+
+.player h5 {
+  font-size: 1.05rem;
+  color: rgb(6, 120, 120);
+}
+
+.japan {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.japan img {
+  flex: 1 1 300px;
+  max-width: 60vh;
+}
+
+.japan .info {
+  flex: 3 1 600px;
+  padding: 2em;
+}
+
+div.competition {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+div.competition .text {
+  flex: 5 1 300px;
+}
+
+div.competition .text h3 {
+  font-size: 2rem;
+  color: rgb(12, 122, 92);
+}
+
+#piechart {
+  flex: 1 1 300px;
+}
+
+.china h3 {
+  font-size: 2rem;
+  color: rgb(12, 122, 92);
+}
+
+.china table {
+  min-width: 1000px;
+}
+
+.china table th {
+  color: white;
+  background-color: rgb(86, 224, 192);
+}
+
+.china table,
+th,
+td {
+  border: 1px solid white;
+  border-collapse: collapse;
+  padding: 2px 4px;
+}
+
+.taiwan h3 {
+  font-size: 2rem;
+  color: rgb(12, 122, 92);
+}
+
+.taiwan ul {
+  margin-left: 2rem;
+}
+
+/* media query:RWD的一種，防止nav的跑版 */
+@media screen and (max-width: 600px) {
+  header nav ul {
+    flex-direction: column;
+  }
+}

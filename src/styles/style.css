@@ -23,9 +23,13 @@ body {
   color: #333;
 }
 body header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  background-color: white;
 }
 body header section.logo {
   display: flex;
@@ -44,13 +48,20 @@ body header nav {
   flex: 5 1 550px;
 }
 body header nav ul {
+  padding: 0;
   display: flex;
   justify-content: space-around;
 }
 body header nav ul li a {
-  color: #333;
+  padding-bottom: 0.3rem;
+  font-size: 1.5rem;
+  color: black;
   text-decoration: none;
-  font-size: 2rem;
+  transition: all 0.2s ease;
+}
+body header nav ul li a:hover {
+  border-bottom: 3px solid rgba(152, 57, 255, 0.5);
+  color: rgba(152, 57, 255, 0.5);
 }
 body main {
   display: flex;
@@ -85,6 +96,7 @@ body main .desc img {
     height: 50vw;
   }
   body header nav ul {
+    padding: 0;
     flex-direction: column;
   }
   body header nav ul li {
@@ -92,6 +104,10 @@ body main .desc img {
     padding: 0.5rem 0.25rem;
   }
 }
+.current-page {
+  color: rgba(152, 57, 255, 0.5);
+}
+
 .footer {
   display: flex;
   justify-content: center;

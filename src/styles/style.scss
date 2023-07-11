@@ -1,3 +1,4 @@
+$themeColor: rgba(152, 57, 255, 0.5);
 * {
   margin: 0;
   padding: 0;
@@ -20,41 +21,6 @@ body {
   font: 16px/1.5 "Helevtica Neue", Helevtica, Arial, "Microsoft Yahei",
     "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
   color: #333;
-  header {
-    display: flex;
-    flex-wrap: wrap;
-    // justify-content: center;
-    align-items: center;
-    section.logo {
-      display: flex;
-      flex-wrap: wrap;
-      // justify-content: center;
-      align-items: center;
-      flex: 0 1 350px;
-      img {
-        width: 6vw;
-        height: 6vw;
-      }
-      h1 {
-        font-size: 2.5rem;
-      }
-    }
-
-    nav {
-      flex: 5 1 550px;
-      ul {
-        display: flex;
-        justify-content: space-around;
-        li {
-          a {
-            color: #333;
-            text-decoration: none;
-            font-size: 2rem;
-          }
-        }
-      }
-    }
-  }
   main {
     display: flex;
     flex-direction: column;
@@ -114,6 +80,7 @@ body {
       }
       nav {
         ul {
+          padding: 0;
           flex-direction: column;
 
           li {
@@ -126,6 +93,11 @@ body {
   }
 }
 
+.current-page {
+  color: $themeColor;
+}
+
 @import "./footer";
 @import "./about";
 @import "./udemy";
+@import "./nav";
