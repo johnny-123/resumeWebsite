@@ -24,12 +24,12 @@ const Nav = () => {
               </Link>
             </li>
             <li>
-              <Link to="/about">
+              <Link to="/udemy">
                 <FontAwesomeIcon icon={faBookOpen} /> 2023家教課程
               </Link>
             </li>
             <li>
-              <Link to="/about">
+              <Link to="/udemy">
                 <FontAwesomeIcon icon={faLaptopCode} /> udemy課程
               </Link>
             </li>
