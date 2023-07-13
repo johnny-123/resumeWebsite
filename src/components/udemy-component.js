@@ -1,8 +1,11 @@
 import React from "react";
 import pj1 from "../images/udemyPJ1.JPG";
 import { faMapPin } from "@fortawesome/free-solid-svg-icons";
-
+import AuthService from "../services/p7.service";
 const UdemyComponent = () => {
+  // const goToP7 = () => {
+  //   AuthService.goP7Homepage();
+  // };
   return (
     <div className="udemy-container">
       <ul>
@@ -605,9 +608,9 @@ const UdemyComponent = () => {
                   project符合MVC(Model–View–Controller)design pattern。
                 </p>
                 <a
-                  href="../../project7/index.js"
                   className="btn btn-primary"
                   target="_blank"
+                  href="http://localhost:8080/api/googleProject"
                 >
                   跳至該專案頁面
                 </a>
