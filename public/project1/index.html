@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>圍棋資訊網</title>
     <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <!-- 新增樣式表(JS插入) -->
   </head>
   <body>
     <header>
@@ -24,6 +31,12 @@
           <li><a href="./china.html">中國棋院</a></li>
           <li><a href="./taiwan.html">海峰棋院</a></li>
         </ul>
+        <!-- 更新:選字體 -->
+        <label for="choose-font" class="choose-font">選擇字體</label>
+        <select id="choose-font">
+          <option value="標楷體">標楷體</option>
+          <option value="清松手寫體1">清松手寫體1</option>
+        </select>
       </nav>
     </header>
     <main>
@@ -126,5 +139,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="app.js"></script>
   </body>
 </html>

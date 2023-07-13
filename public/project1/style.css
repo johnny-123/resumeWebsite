@@ -1,8 +1,8 @@
 /* 增加自己下載的字體並取名 */
-@font-face {
-  font-family: "myFont";
+/* @font-face {
+  font-family: myFont;
   src: url("./resource/清松手寫體1.ttf");
-}
+} */
 
 /* 在此處加入上面自己新增的字體 */
 /* 無論對方電腦是否有該字體，因為伺服器有自動儲存一份此種字體，
@@ -12,7 +12,7 @@
   padding: 0;
   box-sizing: border-box;
   /* 標楷體 */
-  font-family: "myFont", DFkai-sb, sans-serif;
+  font-family: DFkai-sb, sans-serif;
 }
 
 h1,
@@ -197,8 +197,13 @@ td {
 }
 
 /* media query:RWD的一種，防止nav的跑版 */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 640px) {
   header nav ul {
     flex-direction: column;
   }
+}
+
+/*更新內容*/
+.choose-font {
+  padding: 0rem 1rem;
 }
