@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookOpen } from "@fortawesome/free-solid-svg-icons";
@@ -9,10 +9,14 @@ import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import logo from "../images/logo.jpg";
 
 const Nav = () => {
-  let [currentPage, setCurrentPage] = useState(1);
+  let [currentPage, setCurrentPage] = useState("");
   const choosePage = (page) => {
+    console.log(page);
     setCurrentPage(page);
   };
+  useEffect(() => {
+    setCurrentPage(window.location.href);
+  }, []);
   window.addEventListener("scroll", () => {
     let header = document.querySelector("header");
     if (window.scrollY == 0) {
@@ -30,22 +34,22 @@ const Nav = () => {
       <nav>
         <ul>
           <li>
-            {currentPage == 1 && (
+            {currentPage === "http://localhost:3000/" && (
               <Link
                 to="/"
                 onClick={() => {
-                  choosePage(1);
+                  choosePage("http://localhost:3000/");
                 }}
                 className="current-page"
               >
                 首頁
               </Link>
             )}
-            {currentPage != 1 && (
+            {currentPage !== "http://localhost:3000/" && (
               <Link
                 to="/"
                 onClick={() => {
-                  choosePage(1);
+                  choosePage("http://localhost:3000/");
                 }}
               >
                 首頁
@@ -53,22 +57,22 @@ const Nav = () => {
             )}
           </li>
           <li>
-            {currentPage == 2 && (
+            {currentPage === "http://localhost:3000/about" && (
               <Link
                 to="/about"
                 onClick={() => {
-                  choosePage(2);
+                  choosePage("http://localhost:3000/about");
                 }}
                 className="current-page"
               >
                 <FontAwesomeIcon icon={faUser} /> 關於Johnny
               </Link>
             )}
-            {currentPage != 2 && (
+            {currentPage !== "http://localhost:3000/about" && (
               <Link
                 to="/about"
                 onClick={() => {
-                  choosePage(2);
+                  choosePage("http://localhost:3000/about");
                 }}
               >
                 <FontAwesomeIcon icon={faUser} /> 關於Johnny
@@ -81,22 +85,22 @@ const Nav = () => {
               </Link>
             </li> */}
           <li>
-            {currentPage == 3 && (
+            {currentPage === "http://localhost:3000/udemy" && (
               <Link
                 to="/udemy"
                 onClick={() => {
-                  choosePage(3);
+                  choosePage("http://localhost:3000/udemy");
                 }}
                 className="current-page"
               >
                 <FontAwesomeIcon icon={faLaptopCode} /> udemy課程
               </Link>
             )}
-            {currentPage != 3 && (
+            {currentPage !== "http://localhost:3000/udemy" && (
               <Link
                 to="/udemy"
                 onClick={() => {
-                  choosePage(3);
+                  choosePage("http://localhost:3000/udemy");
                 }}
               >
                 <FontAwesomeIcon icon={faLaptopCode} /> udemy課程

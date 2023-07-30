@@ -5,6 +5,7 @@ const ctx = canvas.getContext("2d");
 const unit = 20;
 const row = canvas.height / unit;
 const column = canvas.width / unit;
+let speed_time = 140;
 
 let snake = [];
 function creatSnake() {
@@ -150,6 +151,15 @@ function draw() {
     document.getElementById("myScore").innerHTML = "遊戲分數:" + score;
     setHighestScore(score);
     document.getElementById("myScore2").innerHTML = "最高分數:" + highScore;
+    if (score % 5 == 0) {
+      speed_time -= 20;
+      console.log(speed_time);
+      if (speed_time <= 20) {
+        speed_time = 20;
+      }
+      clearInterval(myGame);
+      myGame = window.setInterval(draw, speed_time);
+    }
   } else {
     snake.pop();
   }
@@ -157,7 +167,7 @@ function draw() {
   window.addEventListener("keydown", changeDirection);
 }
 
-let myGame = window.setInterval(draw, 100);
+let myGame = window.setInterval(draw, speed_time);
 
 function loadHighestScore() {
   if (localStorage.getItem("highestScore") == null) {

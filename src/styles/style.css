@@ -22,47 +22,6 @@ body {
   font: 16px/1.5 "Helevtica Neue", Helevtica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
   color: #333;
 }
-body header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  background-color: white;
-}
-body header section.logo {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  flex: 0 1 350px;
-}
-body header section.logo img {
-  width: 6vw;
-  height: 6vw;
-}
-body header section.logo h1 {
-  font-size: 2.5rem;
-}
-body header nav {
-  flex: 5 1 550px;
-}
-body header nav ul {
-  padding: 0;
-  display: flex;
-  justify-content: space-around;
-}
-body header nav ul li a {
-  padding-bottom: 0.3rem;
-  font-size: 1.5rem;
-  color: black;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-body header nav ul li a:hover {
-  border-bottom: 3px solid rgba(152, 57, 255, 0.5);
-  color: rgba(152, 57, 255, 0.5);
-}
 body main {
   display: flex;
   flex-direction: column;
@@ -92,8 +51,8 @@ body main .desc img {
     flex: 2 1 400px;
   }
   body header section.logo img {
-    width: 50vw;
-    height: 50vw;
+    width: 10vw;
+    height: 10vw;
   }
   body header nav ul {
     padding: 0;
@@ -110,13 +69,60 @@ body main .desc img {
 
 .footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   font-size: 1.25rem;
-  background-color: rgb(228, 255, 226);
+  background-color: black;
   min-height: 20vh;
 }
+.footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  min-width: 80vw;
+}
+.footer ul li {
+  margin: 1rem;
+  color: rgb(175, 175, 167);
+}
+.footer ul li h3 {
+  color: rgb(203, 203, 199);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.footer ul li p {
+  font-size: 1rem;
+}
+.footer .logo-icon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex: 0 1 80vw;
+  margin-bottom: 2rem;
+}
 
+@media screen and (max-width: 692px) {
+  .footer ul {
+    justify-content: start;
+  }
+  .footer ul li {
+    margin: 0.5rem 3rem;
+  }
+  .footer .logo-icon {
+    flex: 1 1 200px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .footer ul {
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin: 0 0;
+  }
+}
 .my-info {
   width: 90vw;
   display: flex;
@@ -206,23 +212,111 @@ h2 {
   border-radius: 50%;
 }
 
-.udemy-container ul {
+.udemy-container {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+  min-width: 100vw;
+  max-width: 100vw;
+  background-image: url("../images/pexels-karolina-grabowska-4207708.jpg");
+  background-size: cover;
+}
+.udemy-container ul {
+  padding: 0;
 }
 .udemy-container ul li {
-  margin: 2rem;
+  margin-bottom: 1rem;
 }
 .udemy-container ul li h2 {
   margin-bottom: 1rem;
+  text-align: center;
+  font-size: 2.5rem;
 }
 .udemy-container ul li .card-container {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
+  margin: 0 1rem;
 }
 .udemy-container ul li .card-container .card {
   flex-grow: 1;
   flex-basis: 1;
+  margin-left: 1rem;
   margin-right: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.15rem;
+  width: 18rem;
+}
+.udemy-container ul li .card-container .card .card-title {
+  font-size: 2rem;
+}
+.udemy-container ul li .card-container .card .card-text {
+  max-height: 220px;
+  overflow-y: auto;
+  font-size: 1.5rem;
+  font-family: "Microsoft JhengHei", serif;
+}
+
+@media screen and (max-width: 500px) {
+  .udemy-container ul li .card-container .card {
+    margin: 1rem 0rem;
+    max-width: 18rem;
+  }
+  .udemy-container ul li .card-container .card .card-img-top {
+    width: 18rem;
+  }
+  .udemy-container ul li .card-container .card .card-body {
+    width: 18rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  .udemy-container ul li .card-container .card {
+    margin: 1rem 0rem;
+    max-width: 15rem;
+  }
+  .udemy-container ul li .card-container .card .card-img-top {
+    width: 15rem;
+  }
+  .udemy-container ul li .card-container .card .card-body {
+    width: 15rem;
+  }
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: white;
+}
+header section.logo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex: 0 1 350px;
+}
+header section.logo img {
+  width: 6vw;
+  height: 6vw;
+}
+header section.logo h1 {
+  font-size: 2.5rem;
+}
+header nav {
+  flex: 5 1 550px;
+}
+header nav ul {
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+header nav ul li a {
+  padding-bottom: 0.3rem;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+header nav ul li a:hover {
+  border-bottom: 3px solid rgba(152, 57, 255, 0.5);
+  color: rgba(152, 57, 255, 0.5);
 }/*# sourceMappingURL=style.css.map */

@@ -4,20 +4,59 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>彈跳球遊戲</title>
+    <title>打磚塊遊戲</title>
     <style>
       * {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
       }
+      body {
+        display: flex;
+      }
+      .info {
+        width: 100vw;
+      }
+      button {
+        display: block;
+        margin: 1rem auto;
+        font-size: 4rem;
+        background-color: aliceblue;
+        border-radius: 1rem;
+        text-align: center;
+      }
+      p {
+        margin: 2rem;
+        text-align: center;
+        font-weight: 700;
+        font-size: 3.5rem;
+      }
       #myCanvas {
+        /* display: block; */
+        /* width: 60%; */
+        /* margin: 0 auto; */
         background: black;
+        /* background-image: url("./resource/game-resource/background_1.png"); */
       }
     </style>
   </head>
   <body>
     <canvas id="myCanvas" width="1000px" height="600px"></canvas>
-    <script src="app.js"></script>
+    <!-- <audio
+      class="start-audio"
+      src="./resource/game-resource/01 Game Start.mp3"
+    ></audio> -->
+    <audio
+      loop
+      class="game-audio"
+      src="./resource/game-resource/05 Ending.mp3"
+    ></audio>
+    <section class="info">
+      <button id="start">開始遊戲</button>
+      <p id="spend-second"></p>
+      <p id="end"></p>
+      <button class="close-audio">開啟音效</button>
+      <script src="app.js"></script>
+    </section>
   </body>
 </html>

@@ -1,2 +1,0 @@
-1.JS動畫
-https://greensock.com/gsap/

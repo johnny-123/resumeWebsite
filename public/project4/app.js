@@ -315,12 +315,19 @@ btn2.addEventListener("click", () => {
 
 function handleSorting(direction) {
   let grades = document.querySelectorAll(".grade");
+  let allInputs = document.querySelector(".all-input");
   let objectArray = [];
   for (let i = 0; i < grades.length; i++) {
     let class_name = grades[i].children[0].value;
     let class_number = grades[i].children[1].value;
     let class_credit = grades[i].children[2].value;
     let class_grade = grades[i].children[3].value;
+    if (class_grade == "") {
+      window.alert(
+        "成績(最後一欄)為必填項目，請填寫該欄位或刪除空白欄位後再做排序"
+      );
+      return;
+    }
     if (
       !(
         class_name == "" &&
@@ -349,7 +356,9 @@ function handleSorting(direction) {
   }
 
   //更新頁面法一
-  for (let i = 0; i < grades.length; i++) {
+  console.log(objectArray.length);
+  console.log(grades.length);
+  for (let i = 0; i < objectArray.length; i++) {
     grades[i].children[0].value = objectArray[i].class_name;
     grades[i].children[1].value = objectArray[i].class_number;
     grades[i].children[2].value = objectArray[i].class_credit;
