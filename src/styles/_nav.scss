@@ -1,3 +1,9 @@
+// $nav-gray-1: #b2c3ce;
+// rgba(152, 57, 255, 0.5);
+// $themeColor: #3f4a6b;
+
+$themeColor: rgba(152, 57, 255, 0.5);
+
 header {
   position: sticky;
   top: 0;
@@ -6,15 +12,16 @@ header {
   flex-wrap: wrap;
   // justify-content: center;
   align-items: center;
-
-  background-color: white;
-  // margin-bottom: 1rem;
+  color: black;
+  background: white;
+  // background-color: $nav-gray-1;
+  // margin-top: 1rem;
   section.logo {
     display: flex;
     flex-wrap: wrap;
     // justify-content: center;
     align-items: center;
-    flex: 0 1 350px;
+    flex: 1 1 350px;
     img {
       width: 6vw;
       height: 6vw;
@@ -23,8 +30,11 @@ header {
       font-size: 2.5rem;
     }
   }
+  .bars {
+    display: none;
+  }
   nav {
-    flex: 5 1 550px;
+    flex: 5 1 610px;
     ul {
       padding: 0;
       display: flex;
@@ -37,8 +47,89 @@ header {
           text-decoration: none;
           transition: all 0.2s ease;
           &:hover {
-            border-bottom: 3px solid $themeColor;
+            transition: all 0.2s ease;
             color: $themeColor;
+          }
+        }
+        .current-page {
+          color: $themeColor;
+          border-bottom: 3px solid $themeColor;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 960px) {
+  body {
+    header {
+      section.logo {
+        flex: 0 1 350px;
+        img {
+          width: 56px;
+          height: 56px;
+        }
+      }
+      justify-content: space-between;
+      .bars {
+        display: inline-block;
+        font-size: 1.5rem;
+        margin-right: 3rem;
+        padding: 0.025rem 1rem;
+        border: 1px solid rgba(94, 92, 96, 0.5);
+        color: rgba(94, 92, 96, 0.5);
+        border-radius: 5%;
+      }
+      nav {
+        ul {
+          padding: 0;
+          flex-direction: column;
+          display: none;
+          li {
+            margin-left: 6vw;
+            padding: 0.5rem 0.25rem;
+            a {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  body {
+    header {
+      section.logo {
+        flex-direction: column;
+        flex: 2 1 400px;
+        img {
+          width: 10vw;
+          height: 10vw;
+        }
+        h1 {
+          font-size: 2rem;
+        }
+      }
+      .bars {
+        display: inline-block;
+        margin: 0;
+        width: 100vw;
+        border-radius: 0%;
+        // margin-left: 2rem;
+        text-align: center;
+      }
+      nav {
+        ul {
+          display: flex;
+          padding: 0;
+          flex-direction: column;
+          li {
+            margin-left: 0;
+            text-align: center;
+            padding: 0.5rem 0.25rem;
+            a {
+              font-size: 1.15rem;
+            }
           }
         }
       }

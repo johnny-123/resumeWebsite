@@ -1,84 +1,464 @@
-.my-info {
-  width: 90vw;
+@import url(https://fonts.googleapis.com/css?family=Bangers);
+$about-gray-1: rgba(57, 54, 59, 0.5);
+$about-gray-2: rgba(94, 92, 96, 0.5);
+$about-gray-3: rgba(233, 196, 255, 0.5);
+$about-green-1: rgba(127, 183, 150, 0.5);
+$about-green-2: rgba(1, 86, 37, 0.641);
+$about-green-3: rgba(140, 245, 184, 0.641);
+$about-blue-1: rgba(83, 101, 237, 0.5);
+$about-blue-2: rgba(84, 223, 230, 0.5);
+$about-yello-1: rgb(251, 255, 4);
+
+main.about {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  img {
-    flex: 0 1 150px;
-    margin-right: 6rem;
-    height: 20vh;
-    width: 10vw;
-    border: 2px solid #000;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.15rem;
+  font-family: "Microsoft JhengHei", serif;
+  .my-info {
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+    .my-picture {
+      // flex: 0 1 160px;
+      width: 136px;
+      // height: 187px;
+      height: 158px;
+      margin-top: 2rem;
+      margin-right: 6rem;
+      border: 1px solid $about-green-3;
+      overflow: hidden;
+      img {
+        width: 136px;
+      }
+    }
+
+    .my-info-text {
+      flex: 0 1 800px;
+      // border: 1px solid #000;
+      h2 {
+        font-size: 1.75rem;
+        font-weight: 700;
+      }
+      .contact {
+        a {
+          margin-left: 0.5rem;
+          font-weight: 500;
+          color: $about-green-2;
+          text-decoration: none;
+        }
+      }
+    }
+    margin-bottom: 2rem;
   }
-  .text {
-    border: 1px solid #000;
-    flex: 0 1 800px;
+  .skills {
+    position: relative;
+    background: white;
+    margin: 2rem 1rem;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -1rem;
+      left: -1rem;
+      display: block;
+      background-color: #ffffff;
+      background-image: linear-gradient(
+        45deg,
+        transparent 49%,
+        $about-green-1 50%,
+        transparent 51%
+      );
+      background-size: 5px 5px;
+      right: -1rem;
+      bottom: -1rem;
+      z-index: -1;
+    }
     h2 {
-      font-size: 1.5rem;
+      margin-top: 1rem;
+      text-align: center;
+      font-size: 1.75rem;
       font-weight: 700;
     }
-  }
-  margin-bottom: 2rem;
-}
-
-h2 {
-  font-weight: 500;
-  font-size: 1.5rem;
-}
-.my-skills {
-  display: flex;
-  flex-wrap: wrap;
-  .each-skill {
-    h3 {
-      font-size: 1.25rem;
+    .my-skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      min-width: 1024px;
+      min-height: 280px;
+      .each-skill {
+        margin: 1rem 2rem;
+        // css star
+        .css-gold-star {
+          display: none;
+        }
+        h3 {
+          font-size: 1.25rem;
+          font-weight: 600;
+        }
+        ul {
+          li {
+            font-weight: 300;
+            list-style-type: disc;
+            .gold-star {
+              padding-right: 0.25rem;
+            }
+          }
+        }
+      }
     }
-    margin: 2rem;
-    border: 1px solid #000;
-    ul {
-      li {
-        list-style-type: circle;
+    .skill-arrow-button-left,
+    .skill-arrow-button-right {
+      display: none;
+    }
+    .skills-logo {
+      position: absolute;
+      top: 260px;
+      left: 480px;
+      display: flex;
+      .specialization {
+        align-self: center;
+        .gold-star {
+          color: $about-yello-1;
+        }
+        small {
+          font-size: 0.5rem;
+          font-style: italic;
+          text-decoration: dashed;
+          color: $about-gray-2;
+        }
+      }
+      ul {
+        display: flex;
+        padding-left: 1rem;
+        li {
+          margin-right: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .edu,
+  .exp {
+    width: 90vw;
+    margin-bottom: 1.5rem;
+    h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      svg {
+        height: 2.5rem;
+        margin-right: 1rem;
+      }
+      small {
+        font-size: 0.5rem;
+      }
+    }
+    .timeline-block {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 30px;
+      h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        small {
+          font-size: 0.5rem;
+          color: $about-gray-2;
+        }
+      }
+      p {
+        font-weight: 300;
+        small {
+          font-size: 0.15rem;
+          color: $about-gray-2;
+        }
+      }
+    }
+    .timeline-block::before {
+      position: absolute;
+      content: "";
+      width: 15px;
+      height: 15px;
+      background-color: white;
+      border: 3px solid $about-gray-1;
+      border-radius: 50%;
+      left: -7px;
+      top: -2px;
+    }
+    .timeline-block::after {
+      position: absolute;
+      content: "";
+      width: 3px;
+      height: 100%;
+      background-color: $about-gray-1;
+      left: -1px;
+      top: 13px;
+    }
+  }
+
+  .edu-content {
+    display: flex;
+    .edu-text {
+      width: 50%;
+      padding-right: 2rem;
+    }
+    .edu-img {
+      width: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      background-image: url(../ICONS/seedling-solid.svg);
+      background-size: 10px;
+      background-repeat: round;
+
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        background: white;
+      }
+      .circle {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        border: 5px solid $about-green-1;
+        border-radius: 50%;
+        margin: 0 1rem;
+        overflow: hidden;
+
+        .filter {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          background-color: rgba(0, 0, 0, 0.65);
+          width: 100%;
+          height: 100%;
+          font-weight: 700;
+          font-size: 2rem;
+          color: $about-gray-3;
+          line-height: 150px;
+          text-align: center;
+        }
+        .fcu-logo {
+          width: 140px;
+          cursor: pointer;
+        }
+        .fcu-rank {
+          position: absolute;
+          top: 5%;
+          max-width: 140px;
+          cursor: pointer;
+        }
+        .fcu-project {
+          position: absolute;
+          z-index: 0;
+          max-width: 140px;
+          cursor: pointer;
+        }
       }
     }
   }
 }
-.edu,
-.exp {
-  width: 90vw;
-  margin-bottom: 2rem;
-  h3:before {
-    content: "";
-    position: absolute;
-    left: -4px;
-    z-index: 10;
-    width: 7px;
-    height: 7px;
-    display: block;
-    border: 1px solid #000;
-    background-color: gray;
-    border-radius: 50%;
+
+@media screen and (max-width: 1200px) {
+  main.about {
+    .my-info {
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+
+      .my-picture {
+        height: 136px;
+        border: 1px solid $about-green-3;
+        border-radius: 50%;
+        margin: 1rem 0 1.5rem 0;
+      }
+      .my-info-text {
+        width: 80vw;
+        flex: 0 1 0;
+        h2 {
+          text-align: center;
+        }
+        .contact {
+          text-align: center;
+        }
+      }
+    }
+    .skills {
+      .my-skills {
+        flex-wrap: nowrap;
+        justify-content: start;
+        min-width: 80vw;
+        max-width: 80vw;
+        min-height: 280px;
+        overflow-x: auto;
+        .each-skill {
+          margin: 1rem 0;
+          min-width: 220px;
+        }
+        .program-skill {
+          margin-left: 2rem;
+        }
+      }
+      .skills-logo {
+        top: 260px;
+        left: 260px;
+      }
+    }
   }
-  h3 {
-    position: relative;
-    border-left: 1px solid #000;
-    padding-left: 1.5rem;
-    padding-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 960px) {
+  main.about {
+    .skills {
+      .my-skills {
+        flex-wrap: wrap;
+        justify-content: start;
+        .each-skill:not(.program-skill) {
+          display: none;
+        }
+        .each-skill {
+          min-width: auto;
+          margin: 1rem 2rem;
+          padding-left: 8%;
+          .css-gold-star {
+            display: none;
+          }
+        }
+      }
+      .skill-arrow-button-left {
+        display: inline-block;
+        position: absolute;
+        left: 25%;
+        top: 85%;
+        font-size: 2rem;
+        color: $about-blue-2;
+        &:hover {
+          color: $about-blue-1;
+          transform: scale(1.5);
+        }
+      }
+      .skill-arrow-button-right {
+        display: inline-block;
+        position: absolute;
+        right: 25%;
+        top: 85%;
+        z-index: 10;
+        font-size: 2rem;
+        color: $about-blue-2;
+        &:hover {
+          color: $about-blue-1;
+          transform: scale(1.5);
+        }
+      }
+      .skills-logo {
+        left: 75%;
+        top: 30%;
+        border-left: 3px dashed $about-green-1;
+        transform: translate(-50%, 0%);
+        width: 50%;
+        height: 50%;
+        .specialization {
+          position: absolute;
+          left: 35%;
+          top: -22%;
+        }
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          padding-left: 1.15rem;
+          li {
+            margin: 0.5rem;
+          }
+        }
+      }
+    }
+    .edu-content {
+      display: block;
+      .edu-text {
+        width: 100%;
+      }
+      .edu-img {
+        width: 100%;
+        padding: 1rem 0;
+      }
+    }
   }
-  p {
-    position: relative;
-    border-left: 1px inset #000;
-    padding-left: 1.5rem;
-    padding-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  main.about {
+    .skills {
+      .my-skills {
+        flex-wrap: wrap;
+        justify-content: center;
+        .each-skill:not(.program-skill) {
+          display: none;
+        }
+        .each-skill {
+          min-width: auto;
+          padding-left: 0;
+          .css-gold-star {
+            display: inline-block;
+          }
+        }
+      }
+      .skill-arrow-button-left {
+        left: 8%;
+        top: 60%;
+        font-size: 1.75rem;
+      }
+      .skill-arrow-button-right {
+        right: 8%;
+        top: 60%;
+        font-size: 1.75rem;
+      }
+      .skills-logo {
+        left: 50%;
+        top: 85%;
+        transform: translate(-50%, 0%);
+        border-left: 0;
+        width: auto;
+        height: auto;
+        .specialization {
+          position: static;
+        }
+        ul {
+          display: none;
+        }
+      }
+    }
   }
-  p::after {
-    content: "";
-    position: absolute;
-    left: -4px;
-    z-index: 10;
-    width: 7px;
-    height: 7px;
-    display: block;
-    border: 1px solid #000;
-    background-color: gray;
-    border-radius: 50%;
+}
+
+@media screen and (max-width: 480px) {
+  main.about {
+    .edu-content {
+      .edu-img {
+        margin: 0 auto;
+        flex-direction: column;
+        .circle {
+          margin: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.15);
   }
 }

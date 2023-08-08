@@ -1,21 +1,32 @@
 import React, { useState, useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faBookOpen } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import { faFileLines } from "@fortawesome/free-solid-svg-icons";
 import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import logo from "../images/logo.jpg";
+import { set } from "mongoose";
 
 const Nav = () => {
   let [currentPage, setCurrentPage] = useState("");
   const choosePage = (page) => {
-    console.log(page);
     setCurrentPage(page);
+    if (windowWidth <= 960) {
+      setBarsState("close");
+      barsClick();
+    }
   };
   useEffect(() => {
     setCurrentPage(window.location.href);
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
   window.addEventListener("scroll", () => {
     let header = document.querySelector("header");
@@ -25,12 +36,47 @@ const Nav = () => {
       header.style.boxShadow = "0 10px 6px -6px #777";
     }
   });
+  let [barsState, setBarsState] = useState("close");
+  const barsClick = () => {
+    if (barsState === "close") {
+      document.querySelector(".bars").style.border =
+        "3px solid rgb(241, 230, 109)";
+      document.querySelector("ul").style.display = "flex";
+      setBarsState("open");
+    } else {
+      document.querySelector(".bars").style.border =
+        "1px solid rgba(94, 92, 96, 0.5)";
+      document.querySelector("ul").style.display = "none";
+      setBarsState("close");
+    }
+  };
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+  useEffect(() => {
+    if (windowWidth > 960) {
+      //(||<480)
+      document.querySelector("ul").style.display = "flex";
+      // setBarsState("close");
+    } else {
+      if (barsState === "close") {
+        document.querySelector("ul").style.display = "none";
+      }
+    }
+  }, [windowWidth]);
+
   return (
     <header>
       <section className="logo">
         <img src={logo} alt="網站logo" />
         <h1>Johnny Wang</h1>
       </section>
+
+      <div className="bars" onClick={barsClick}>
+        <FontAwesomeIcon icon={faBars} />
+      </div>
+
       <nav>
         <ul>
           <li>
@@ -42,7 +88,7 @@ const Nav = () => {
                 }}
                 className="current-page"
               >
-                首頁
+                <FontAwesomeIcon icon={faHouse} /> 首頁
               </Link>
             )}
             {currentPage !== "http://localhost:3000/" && (
@@ -52,7 +98,7 @@ const Nav = () => {
                   choosePage("http://localhost:3000/");
                 }}
               >
-                首頁
+                <FontAwesomeIcon icon={faHouse} /> 首頁
               </Link>
             )}
           </li>

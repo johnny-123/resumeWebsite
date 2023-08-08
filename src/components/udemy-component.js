@@ -8,8 +8,7 @@ import pj6 from "../images/udemyPJ6.JPG";
 import pj7 from "../images/udemyPJ7.JPG";
 import pj8 from "../images/udemyPJ8.JPG";
 import pj9 from "../images/udemyPJ9.JPG";
-import { faMapPin } from "@fortawesome/free-solid-svg-icons";
-import udemyService from "../services/udemy.service";
+
 const UdemyComponent = () => {
   return (
     <div className="udemy-container">
@@ -47,7 +46,7 @@ const UdemyComponent = () => {
               <div
                 className="modal fade"
                 id="exampleModal1"
-                tabindex="-1"
+                tabIndex="-1"
                 aria-labelledby="exampleModalLabel"
                 aria-hidden="true"
               >
@@ -108,7 +107,7 @@ const UdemyComponent = () => {
               <div
                 className="modal fade"
                 id="exampleModal2"
-                tabindex="-1"
+                tabIndex="-1"
                 aria-labelledby="exampleModalLabel"
                 aria-hidden="true"
               >
@@ -170,7 +169,7 @@ const UdemyComponent = () => {
               <div
                 className="modal fade"
                 id="exampleModal3"
-                tabindex="-1"
+                tabIndex="-1"
                 aria-labelledby="exampleModalLabel"
                 aria-hidden="true"
               >
@@ -218,7 +217,7 @@ const UdemyComponent = () => {
                   利用JavaScript控制網頁物件，了解DOM的運作方法以及實作應用方式。
                 </p>
                 <a
-                  href="../../project3/index.html"
+                  href="../../project4/index.html"
                   className="btn btn-primary"
                   target="_blank"
                 >
@@ -238,7 +237,7 @@ const UdemyComponent = () => {
               <div
                 className="modal fade"
                 id="exampleModal4"
-                tabindex="-1"
+                tabIndex="-1"
                 aria-labelledby="exampleModalLabel"
                 aria-hidden="true"
               >
@@ -308,7 +307,7 @@ const UdemyComponent = () => {
               <div
                 className="modal fade"
                 id="exampleModal5"
-                tabindex="-1"
+                tabIndex="-1"
                 aria-labelledby="exampleModalLabel"
                 aria-hidden="true"
               >
@@ -370,7 +369,7 @@ const UdemyComponent = () => {
               <div
                 className="modal fade"
                 id="exampleModal6"
-                tabindex="-1"
+                tabIndex="-1"
                 aria-labelledby="exampleModalLabel"
                 aria-hidden="true"
               >
@@ -449,7 +448,7 @@ const UdemyComponent = () => {
               <div
                 className="modal fade"
                 id="exampleModal7"
-                tabindex="-1"
+                tabIndex="-1"
                 aria-labelledby="exampleModalLabel"
                 aria-hidden="true"
               >
@@ -509,7 +508,7 @@ const UdemyComponent = () => {
               <div
                 className="modal fade"
                 id="exampleModal8"
-                tabindex="-1"
+                tabIndex="-1"
                 aria-labelledby="exampleModalLabel"
                 aria-hidden="true"
               >
@@ -575,7 +574,7 @@ const UdemyComponent = () => {
               <div
                 className="modal fade"
                 id="exampleModal9"
-                tabindex="-1"
+                tabIndex="-1"
                 aria-labelledby="exampleModalLabel"
                 aria-hidden="true"
               >
