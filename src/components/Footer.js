@@ -22,14 +22,14 @@ const Footer = () => {
           <p>王佑齊 Johnny Wang</p>
           <p>逢甲大學資訊工程學系畢業</p>
           <p>
-            詳細資訊:<a>點此看履歷</a>
+            詳細資訊<a>點此看履歷</a>
           </p>
         </li>
         <li>
           <h3>聯絡方式</h3>
           <p>電話 0970969800</p>
           <p>位置 臺中市西區民權路</p>
-          <p>Mail:johnny890603@gmail.com</p>
+          <p>Mail johnny8906030714@gmail.com</p>
         </li>
       </ul>
       <div className="logo-icon">

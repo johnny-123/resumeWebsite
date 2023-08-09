@@ -3,7 +3,7 @@ import homepageImg from "../images/homepage_img.jpg";
 
 const HomepageComponent = () => {
   return (
-    <main className="home">
+    <div className="home">
       <div className="desc">
         <div className="motto">
           <p className="one">你怎麼處理失敗</p>
@@ -20,7 +20,7 @@ const HomepageComponent = () => {
       <div className="border-img">
         <img src={homepageImg} alt="pexel圖片" />
       </div>
-    </main>
+    </div>
   );
 };
 

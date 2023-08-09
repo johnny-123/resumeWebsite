@@ -20,14 +20,13 @@ body {
   font: 16px/1.5 "Helevtica Neue", Helevtica, Arial, "Microsoft Yahei",
     "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
   color: #333;
-  main.home {
-    // background-color: black;
-    background-color: #272725;
+  .home {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    min-height: 70vh;
     align-items: center;
+    min-height: 680px;
+    background-color: #272725;
     font-size: 1.15rem;
     font-weight: 300;
     font-family: "Microsoft JhengHei", serif;
@@ -39,29 +38,24 @@ body {
         position: relative;
         width: 600px;
         height: 250px;
-
         font-size: 4rem;
         font-weight: 900;
         color: rgba(7, 251, 174, 0.5);
         font-style: italic;
         overflow: hidden;
         .one {
+          position: absolute;
           width: 600px;
           overflow: hidden;
-          position: absolute;
           animation-name: moveIn;
           animation-duration: 1.5s;
-          // animation-timing-function: ease-out;
-          // animation-iteration-count: infinite;
         }
         .two {
+          position: absolute;
           width: 600px;
           overflow: hidden;
-          position: absolute;
           animation-name: moveIn;
           animation-duration: 1.8s;
-          // animation-timing-function: ease-out;
-          // animation-iteration-count: infinite;
         }
       }
       .desc-text {
@@ -76,6 +70,7 @@ body {
       max-width: 600px;
       height: 340px;
       margin-right: 3rem;
+      // border動畫
       --border-angle: 0turn;
       background-image: conic-gradient(
           from var(--border-angle),
@@ -84,7 +79,6 @@ body {
           #213
         ),
         conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
-
       background-size: calc(100% - 6px) calc(100% - 6px), cover;
       background-position: center center;
       background-repeat: no-repeat;
@@ -95,16 +89,10 @@ body {
         }
       }
       img {
-        // display: inline-block;
-        // max-width: 600px;
-        // width: 600px;
         margin-left: 6px;
         margin-top: 6px;
         width: calc(100% - 12px);
         height: calc(100% - 12px);
-        // height: 334px;
-        // border: 1px solid #272725;
-        // box-shadow: 10px 10px 10px 10px#2d2d2b;
       }
     }
   }
@@ -112,7 +100,7 @@ body {
 
 @media screen and (max-width: 1200px) {
   body {
-    main.home {
+    .home {
       flex-direction: column;
       justify-content: center;
       .desc {
@@ -122,11 +110,10 @@ body {
       }
       .border-img {
         flex: 1 1 600px;
-        max-width: 80vw;
-        width: 800px;
-        // height: calc(width);
         margin-right: 0;
         margin-bottom: 1rem;
+        max-width: 80vw;
+        width: 800px;
       }
     }
   }
@@ -134,18 +121,18 @@ body {
 
 @media screen and (max-width: 680px) {
   body {
-    main.home {
+    .home {
       .desc {
         flex: 1 1 300px;
         .desc-text,
         .motto {
           max-width: 90vw;
-          font-size: 1.75rem;
           height: 120px;
+          font-size: 1.75rem;
         }
         .desc-text {
-          font-size: 1.25rem;
           height: auto;
+          font-size: 1.25rem;
         }
       }
       .border-img {
@@ -158,17 +145,20 @@ body {
   }
 }
 
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
 @keyframes moveIn {
   0% {
-    opacity: 0;
     left: 600px;
+    opacity: 0;
   }
-  // 33% {
-  //   opacity: 10%;
-  // }
   100% {
-    opacity: 100%;
     left: 0;
+    opacity: 100%;
   }
 }
 
@@ -176,9 +166,3 @@ body {
 @import "./about";
 @import "./udemy";
 @import "./nav";
-
-@property --border-angle {
-  syntax: "<angle>";
-  inherits: true;
-  initial-value: 0turn;
-}

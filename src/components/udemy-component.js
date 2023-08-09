@@ -9,6 +9,10 @@ import pj7 from "../images/udemyPJ7.JPG";
 import pj8 from "../images/udemyPJ8.JPG";
 import pj9 from "../images/udemyPJ9.JPG";
 
+let serverAlert = function () {
+  window.alert("即將跳轉到私人網站頁面，請確認該網站伺服器已經開啟!");
+};
+
 const UdemyComponent = () => {
   return (
     <div className="udemy-container">
@@ -63,7 +67,7 @@ const UdemyComponent = () => {
                         aria-label="Close"
                       ></button>
                     </div>
-                    <div className="modal-body">1. 新增字體選擇功能。</div>
+                    <div className="modal-body">1.新增字體選擇功能。</div>
                     <div className="modal-footer">
                       <button
                         type="button"
@@ -431,6 +435,7 @@ const UdemyComponent = () => {
                   className="btn btn-primary"
                   target="_blank"
                   href="http://localhost:8080/api/googleProject"
+                  onClick={serverAlert}
                 >
                   跳至該專案頁面
                 </a>
@@ -491,6 +496,7 @@ const UdemyComponent = () => {
                   href="http://localhost:3001/"
                   className="btn btn-primary"
                   target="_blank"
+                  onClick={serverAlert}
                 >
                   跳至該專案頁面
                 </a>
@@ -527,6 +533,7 @@ const UdemyComponent = () => {
                     </div>
                     <div className="modal-body">
                       1.增加能連接到Pexels網站下載圖片之功能。
+                      <br />
                       2.新增簡單"about"介面內容
                     </div>
                     <div className="modal-footer">
@@ -555,6 +562,7 @@ const UdemyComponent = () => {
                   href="http://localhost:3002/"
                   className="btn btn-primary"
                   target="_blank"
+                  onClick={serverAlert}
                 >
                   跳至該專案頁面
                 </a>
@@ -610,8 +618,6 @@ const UdemyComponent = () => {
                   </div>
                 </div>
               </div>
-
-              {/* </ul> */}
             </div>
           </div>
         </li>

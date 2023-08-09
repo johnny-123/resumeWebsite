@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Bangers);
+// @import url(https://fonts.googleapis.com/css?family=Bangers);
 $about-gray-1: rgba(57, 54, 59, 0.5);
 $about-gray-2: rgba(94, 92, 96, 0.5);
 $about-gray-3: rgba(233, 196, 255, 0.5);
@@ -9,22 +9,21 @@ $about-blue-1: rgba(83, 101, 237, 0.5);
 $about-blue-2: rgba(84, 223, 230, 0.5);
 $about-yello-1: rgb(251, 255, 4);
 
-main.about {
+.about {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 1.15rem;
   font-family: "Microsoft JhengHei", serif;
   .my-info {
-    width: 90vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 90vw;
     margin-top: 1rem;
+    margin-bottom: 2rem;
     .my-picture {
-      // flex: 0 1 160px;
       width: 136px;
-      // height: 187px;
       height: 158px;
       margin-top: 2rem;
       margin-right: 6rem;
@@ -34,10 +33,8 @@ main.about {
         width: 136px;
       }
     }
-
     .my-info-text {
       flex: 0 1 800px;
-      // border: 1px solid #000;
       h2 {
         font-size: 1.75rem;
         font-weight: 700;
@@ -51,7 +48,6 @@ main.about {
         }
       }
     }
-    margin-bottom: 2rem;
   }
   .skills {
     position: relative;
@@ -268,12 +264,11 @@ main.about {
 }
 
 @media screen and (max-width: 1200px) {
-  main.about {
+  .about {
     .my-info {
       flex-direction: column;
       align-items: center;
       margin: 0;
-
       .my-picture {
         height: 136px;
         border: 1px solid $about-green-3;
@@ -281,8 +276,8 @@ main.about {
         margin: 1rem 0 1.5rem 0;
       }
       .my-info-text {
-        width: 80vw;
         flex: 0 1 0;
+        width: 80vw;
         h2 {
           text-align: center;
         }
@@ -300,8 +295,8 @@ main.about {
         min-height: 280px;
         overflow-x: auto;
         .each-skill {
-          margin: 1rem 0;
           min-width: 220px;
+          margin: 1rem 0;
         }
         .program-skill {
           margin-left: 2rem;
@@ -316,7 +311,7 @@ main.about {
 }
 
 @media screen and (max-width: 960px) {
-  main.about {
+  .about {
     .skills {
       .my-skills {
         flex-wrap: wrap;
@@ -334,10 +329,10 @@ main.about {
         }
       }
       .skill-arrow-button-left {
-        display: inline-block;
         position: absolute;
         left: 25%;
         top: 85%;
+        display: inline-block;
         font-size: 2rem;
         color: $about-blue-2;
         &:hover {
@@ -346,11 +341,11 @@ main.about {
         }
       }
       .skill-arrow-button-right {
-        display: inline-block;
         position: absolute;
         right: 25%;
         top: 85%;
         z-index: 10;
+        display: inline-block;
         font-size: 2rem;
         color: $about-blue-2;
         &:hover {
@@ -396,7 +391,7 @@ main.about {
 }
 
 @media screen and (max-width: 600px) {
-  main.about {
+  .about {
     .skills {
       .my-skills {
         flex-wrap: wrap;
@@ -441,11 +436,11 @@ main.about {
 }
 
 @media screen and (max-width: 480px) {
-  main.about {
+  .about {
     .edu-content {
       .edu-img {
-        margin: 0 auto;
         flex-direction: column;
+        margin: 0 auto;
         .circle {
           margin: 1rem;
         }

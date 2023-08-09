@@ -2,13 +2,15 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { gsap } from "gsap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
-import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { faArrowAltCircleLeft } from "@fortawesome/free-solid-svg-icons";
-import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faMobileScreenButton } from "@fortawesome/free-solid-svg-icons";
+import {
+  faGraduationCap,
+  faBriefcase,
+  faStar,
+  faArrowAltCircleLeft,
+  faArrowAltCircleRight,
+  faEnvelope,
+  faMobileScreenButton,
+} from "@fortawesome/free-solid-svg-icons";
 import htmlIcon from "../ICONS/icons8-html-5.svg";
 import cssIcon from "../ICONS/icons8-css3.svg";
 import javaScriptlIcon from "../ICONS/icons8-javascript.svg";
@@ -40,7 +42,6 @@ const AboutComponent = () => {
       target = document.querySelector(".nodeJs");
       target_star = document.querySelector(".nodeJs .gold-star");
     }
-
     if (move === "over") {
       target_star.style.display = "inline-block";
       animateOver(target, target_star);
@@ -131,6 +132,7 @@ const AboutComponent = () => {
     }
   }, [windowWidth]);
 
+  // edu img filter design
   const filterEvent = function (action, fcuItem) {
     let item;
     if (fcuItem === "logo") {
@@ -153,14 +155,12 @@ const AboutComponent = () => {
     }
   };
 
-  const imgDisplay = function () {};
   return (
-    <main className="about">
+    <div className="about">
       <div className="my-info">
         <div className="my-picture">
           <img src={myPicture} alt="大頭照" />
         </div>
-
         <div className="my-info-text">
           <h2>王佑齊 Johnny Wang</h2>
           <p>
@@ -366,7 +366,6 @@ const AboutComponent = () => {
           </ul>
         </div>
       </div>
-
       <div className="edu">
         <h2>
           <FontAwesomeIcon icon={faGraduationCap} />
@@ -577,7 +576,6 @@ const AboutComponent = () => {
           </div>
         </div>
       </div>
-
       <div className="exp">
         <h2>
           <FontAwesomeIcon icon={faBriefcase} />
@@ -593,16 +591,15 @@ const AboutComponent = () => {
         </div>
         <div className="timeline-block">
           <h3>
-            大學畢業-至今 自我進修 <small>2022年6月-2023年6月</small>
+            大學畢業-至今 自我進修 <small>2022年6月-至今</small>
           </h3>
           <p>
-            在休閒時間也利用udemy的線上課程提升自己不同方面的程式能力，在udemy主修的課程以網頁全端設計為主，目前也在持續進修中。
+            在休閒時間也利用各種線上課程提升自己程式設計方面的知識，並且積極製作side
+            project以及優化之前系統以提升自身實作能力。目前以udemy的線上課程為主提升自己不同方面的程式能力，在udemy主修的課程以網頁全端設計為主，目前也在持續進修中。
           </p>
         </div>
       </div>
-
-      {/* <div className="artist"></div> */}
-    </main>
+    </div>
   );
 };
 
