@@ -90,6 +90,9 @@ body main .main-part h1 {
 body main .main-part p {
   font-size: 1.15rem;
 }
+body main .main-part .all-input form .grade {
+  width: 700px;
+}
 body main .main-part .all-input form .grade input,
 body main .main-part .all-input form .grade select {
   padding: 0.5rem;

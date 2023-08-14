@@ -11,11 +11,13 @@
         margin: 0;
         box-sizing: border-box;
       }
-      body {
+      div.flex-part {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
       }
       .info {
-        width: 100vw;
+        width: 300px;
       }
       button {
         display: block;
@@ -29,7 +31,7 @@
         margin: 2rem;
         text-align: center;
         font-weight: 700;
-        font-size: 3.5rem;
+        font-size: 2rem;
       }
       #myCanvas {
         /* display: block; */
@@ -41,22 +43,24 @@
     </style>
   </head>
   <body>
-    <canvas id="myCanvas" width="1000px" height="600px"></canvas>
-    <!-- <audio
+    <div class="flex-part">
+      <canvas id="myCanvas" width="600px" height="600px"></canvas>
+      <!-- <audio
       class="start-audio"
       src="./resource/game-resource/01 Game Start.mp3"
     ></audio> -->
-    <audio
-      loop
-      class="game-audio"
-      src="./resource/game-resource/05 Ending.mp3"
-    ></audio>
-    <section class="info">
-      <button id="start">開始遊戲</button>
-      <p id="spend-second"></p>
-      <p id="end"></p>
-      <button class="close-audio">開啟音效</button>
-      <script src="app.js"></script>
-    </section>
+      <audio
+        loop
+        class="game-audio"
+        src="./resource/game-resource/05 Ending.mp3"
+      ></audio>
+      <section class="info">
+        <button id="start">開始遊戲</button>
+        <p id="spend-second"></p>
+        <p id="end"></p>
+        <button class="close-audio">開啟音效</button>
+        <script src="app.js"></script>
+      </section>
+    </div>
   </body>
 </html>

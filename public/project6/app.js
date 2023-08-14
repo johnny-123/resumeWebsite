@@ -40,9 +40,11 @@ function allGame() {
   let ground_height = 5;
   let bricks_count = 10;
   let count = 0;
-
+  console.log(screen.width);
   myCanvas.addEventListener("mousemove", (e) => {
-    ground_x = e.clientX;
+    console.log(e);
+
+    ground_x = e.clientX - (screen.width - 900) / 2;
   });
   let myBricks = [];
   class Brick {
@@ -84,7 +86,7 @@ function allGame() {
       }
     }
     do {
-      new_x = Math.floor(Math.random() * 10) * 100;
+      new_x = Math.floor(Math.random() * 6) * 100;
       new_y = Math.floor(Math.random() * 8) * 50;
       checkOverlap(new_x, new_y);
     } while (overlapping);

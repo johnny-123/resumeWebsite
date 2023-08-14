@@ -194,16 +194,17 @@ body {
   }
 }
 
-
-
 @media screen and (max-width: 700px) {
   body {
     header {
       section.logo {
         flex-direction: column;
         img {
-          width: 50vw;
-          height: 50vw;
+          width: 10vw;
+          height: 10vw;
+        }
+        h1 {
+          font-size: 1.5rem;
         }
       }
       nav {
@@ -211,6 +212,9 @@ body {
           flex-direction: column;
           li {
             padding: 0.5rem 0.25rem;
+            a {
+              font-size: 1rem;
+            }
           }
         }
       }

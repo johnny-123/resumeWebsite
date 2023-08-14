@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import pj1 from "../images/udemyPJ1.JPG";
 import pj2 from "../images/udemyPJ2.JPG";
 import pj3 from "../images/udemyPJ3.JPG";
@@ -9,11 +9,30 @@ import pj7 from "../images/udemyPJ7.JPG";
 import pj8 from "../images/udemyPJ8.JPG";
 import pj9 from "../images/udemyPJ9.JPG";
 
-let serverAlert = function () {
-  window.alert("即將跳轉到私人網站頁面，請確認該網站伺服器已經開啟!");
-};
-
 const UdemyComponent = () => {
+  let serverAlert = function () {
+    window.alert("即將跳轉到私人網站頁面，請確認該網站伺服器已經開啟!");
+  };
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [desktopLimit, setDesktopLimit] = useState(false);
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (windowWidth >= 960) {
+      setDesktopLimit(true);
+    } else {
+      setDesktopLimit(false);
+    }
+  }, [windowWidth]);
   return (
     <div className="udemy-container">
       <ul>
@@ -220,13 +239,27 @@ const UdemyComponent = () => {
                 <p className="card-text">
                   利用JavaScript控制網頁物件，了解DOM的運作方法以及實作應用方式。
                 </p>
-                <a
-                  href="../../project4/index.html"
-                  className="btn btn-primary"
-                  target="_blank"
-                >
-                  跳至該專案頁面
-                </a>
+                {desktopLimit && (
+                  <a
+                    href="../../project4/index.html"
+                    className="btn btn-primary"
+                    target="_blank"
+                  >
+                    跳至該專案頁面
+                  </a>
+                )}
+                {!desktopLimit && (
+                  <button
+                    className="btn btn-warning"
+                    onClick={() => {
+                      window.alert(
+                        "請使用桌機，且確保網頁寬度大於960px，以獲得最佳的用戶體驗!"
+                      );
+                    }}
+                  >
+                    裝置不符，點擊觀看詳情
+                  </button>
+                )}
               </div>
               <button
                 type="button"
@@ -289,13 +322,27 @@ const UdemyComponent = () => {
                 <p className="card-text">
                   綜合HTML+CSS+JavaScript的一網頁小遊戲，並能更熟悉JavaScript進階的事件、函式、類別運用方式。
                 </p>
-                <a
-                  href="../../project5/index.html"
-                  className="btn btn-primary"
-                  target="_blank"
-                >
-                  跳至該專案頁面
-                </a>
+                {desktopLimit && (
+                  <a
+                    href="../../project5/index.html"
+                    className="btn btn-primary"
+                    target="_blank"
+                  >
+                    跳至該專案頁面
+                  </a>
+                )}
+                {!desktopLimit && (
+                  <button
+                    className="btn btn-warning"
+                    onClick={() => {
+                      window.alert(
+                        "請使用桌機，且確保網頁寬度大於960px，以獲得最佳的用戶體驗!"
+                      );
+                    }}
+                  >
+                    裝置不符，點擊觀看詳情
+                  </button>
+                )}
               </div>
               {/* 更新資訊按鈕 */}
               <button
@@ -352,13 +399,27 @@ const UdemyComponent = () => {
                 <p className="card-text">
                   利用canvas做出的小遊戲，用以熟悉JavaScript進階的事件、函式、物件類別運用方式，並且能對網頁物件、canvas內容做出各種想要的操作。
                 </p>
-                <a
-                  href="../../project6/index.html"
-                  className="btn btn-primary"
-                  target="_blank"
-                >
-                  跳至該專案頁面
-                </a>
+                {desktopLimit && (
+                  <a
+                    href="../../project6/index.html"
+                    className="btn btn-primary"
+                    target="_blank"
+                  >
+                    跳至該專案頁面
+                  </a>
+                )}
+                {!desktopLimit && (
+                  <button
+                    className="btn btn-warning"
+                    onClick={() => {
+                      window.alert(
+                        "請使用桌機，且確保網頁寬度大於960px，以獲得最佳的用戶體驗!"
+                      );
+                    }}
+                  >
+                    裝置不符，點擊觀看詳情
+                  </button>
+                )}
               </div>
               <button
                 type="button"
