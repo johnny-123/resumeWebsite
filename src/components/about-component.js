@@ -19,7 +19,7 @@ import nodeJslIcon from "../ICONS/Node.js_logo.svg";
 import fcuLogo from "../images/fcu_logo.jpg";
 import fcuRank from "../images/fcu_rank.jpg";
 import fcuProject from "../images/fcu_project.jpg";
-import myPicture from "../images/my_picture.jpg";
+import myPicture from "../images/my_pic.jpg";
 
 const AboutComponent = () => {
   //Skill icon hover event(screen>1024)
@@ -188,7 +188,7 @@ const AboutComponent = () => {
             <h3>Program</h3>
             <ul>
               <li>C</li>
-              <li>JAVA</li>
+              <li>Java</li>
               <li className="css3">
                 <FontAwesomeIcon
                   icon={faStar}
@@ -221,7 +221,7 @@ const AboutComponent = () => {
                   className="gold-star"
                   style={{ display: "none" }}
                 />
-                JavaScript
+                Javascript
                 <FontAwesomeIcon
                   icon={faStar}
                   className="css-gold-star"
@@ -235,7 +235,7 @@ const AboutComponent = () => {
             <h3>Databse</h3>
             <ul>
               <li>MySQL</li>
-              <li>MangoDB</li>
+              <li>MongoDB</li>
             </ul>
           </div>
           <div className="IDE-skill each-skill">

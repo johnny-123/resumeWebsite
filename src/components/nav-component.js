@@ -16,6 +16,7 @@ const Nav = () => {
   let [currentPage, setCurrentPage] = useState("");
   const choosePage = (page) => {
     setCurrentPage(page);
+    window.scrollTo(0, 0);
     if (windowWidth <= 960) {
       setBarsState("close");
       barsClick();
