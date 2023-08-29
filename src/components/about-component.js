@@ -88,14 +88,14 @@ const AboutComponent = () => {
     };
   }, []);
   const skillLeft = function () {
-    if (skillTurn == 0) {
+    if (skillTurn === 0) {
       setSkillTurn(4);
     } else {
       setSkillTurn(skillTurn - 1);
     }
   };
   const skillRight = function () {
-    if (skillTurn == 4) {
+    if (skillTurn === 4) {
       setSkillTurn(0);
     } else {
       setSkillTurn(skillTurn + 1);
@@ -108,7 +108,7 @@ const AboutComponent = () => {
   useEffect(() => {
     let myskill = document.querySelector(".my-skills");
     for (let i = 0; i < 5; i++) {
-      if (i == skillTurn) {
+      if (i === skillTurn) {
         myskill.children[i].style.display = "block";
       } else {
         myskill.children[i].style.display = "none";
@@ -123,7 +123,7 @@ const AboutComponent = () => {
       }
     } else {
       for (let i = 0; i < 5; i++) {
-        if (i == skillTurn) {
+        if (i === skillTurn) {
           myskill.children[i].style.display = "block";
         } else {
           myskill.children[i].style.display = "none";

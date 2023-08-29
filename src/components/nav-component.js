@@ -25,7 +25,7 @@ const Nav = () => {
   // nav sticky style
   window.addEventListener("scroll", () => {
     let navbar = document.querySelector(".my-navbar");
-    if (window.scrollY == 0) {
+    if (window.scrollY === 0) {
       navbar.style.boxShadow = "";
     } else {
       navbar.style.boxShadow = "0 10px 6px -6px #777";

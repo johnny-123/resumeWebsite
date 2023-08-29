@@ -497,6 +497,7 @@ const UdemyComponent = () => {
                   target="_blank"
                   href="http://localhost:8080/api/googleProject"
                   onClick={serverAlert}
+                  rel="noreferrer"
                 >
                   跳至該專案頁面
                 </a>
@@ -558,6 +559,7 @@ const UdemyComponent = () => {
                   className="btn btn-primary"
                   target="_blank"
                   onClick={serverAlert}
+                  rel="noreferrer"
                 >
                   跳至該專案頁面
                 </a>
@@ -624,6 +626,7 @@ const UdemyComponent = () => {
                   className="btn btn-primary"
                   target="_blank"
                   onClick={serverAlert}
+                  rel="noreferrer"
                 >
                   跳至該專案頁面
                 </a>
