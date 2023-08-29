@@ -130,7 +130,7 @@ const AboutComponent = () => {
         }
       }
     }
-  }, [windowWidth]);
+  }, [windowWidth, skillTurn]);
 
   // edu img filter design
   const filterEvent = function (action, fcuItem) {

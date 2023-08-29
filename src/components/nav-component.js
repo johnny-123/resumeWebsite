@@ -68,7 +68,7 @@ const Nav = () => {
         document.querySelector("ul").style.display = "none";
       }
     }
-  }, [windowWidth]);
+  }, [windowWidth, barsState]);
 
   return (
     <div className="my-navbar">
